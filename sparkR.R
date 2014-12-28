@@ -6,9 +6,10 @@ library(rJava)
 
 
 #install the package
+install.packages("devtools")
 library(devtools)
 install_github("amplab-extras/SparkR-pkg", subdir="pkg")
-library(sparkR)
+library(SparkR)
 
 #run a local Spark master
 sc <- sparkR.init(master="local")
