@@ -15,6 +15,6 @@ library(SparkR)
 sc <- sparkR.init(master="local")
 
 #read an input file from HDFS and process every line using lapply on a RDD
-sc <- sparkR.init("local")
+#sc <- sparkR.init("local")
 lines <- textFile(sc, "hdfs://data.txt")
 wordsPerLine <- lapply(lines, function(line) { length(unlist(strsplit(line, " "))) })
